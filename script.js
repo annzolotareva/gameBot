@@ -10,10 +10,10 @@ const guessNumber = function () {
   const repeat = function () {
     let userEnteredNumber = prompt("Угадай число от 1 до 100");
     if (isNumber(userEnteredNumber)) {
-      if (userEnteredNumber < randomHiddenNumber) {
+      if (+userEnteredNumber < randomHiddenNumber) {
         alert("Загаданное число больше");
         repeat();
-      } else if (userEnteredNumber > randomHiddenNumber) {
+      } else if (+userEnteredNumber > randomHiddenNumber) {
         alert("Загаданное число меньше");
         repeat();
       } else {
